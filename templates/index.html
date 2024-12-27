@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends</title>
+</head>
+<body>
+    <h1>Trending Topics on Twitter</h1>
+    <button onclick="window.location.href='/run-script'">Run Script to Fetch Trends</button>
+    
+    {% if record %}
+    <h3>Latest Trends ({{ record['timestamp'] }})</h3>
+    <ul>
+        <li>{{ record['trend1'] }}</li>
+        <li>{{ record['trend2'] }}</li>
+        <li>{{ record['trend3'] }}</li>
+        <li>{{ record['trend4'] }}</li>
+        <li>{{ record['trend5'] }}</li>
+    </ul>
+    <p>Used proxy: {{ record['ip_address'] }}</p>
+    {% endif %}
+</body>
+</html>
